@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body * {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.outer-width {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.inner-padding {
+    padding-left: 405px;
+    padding-right: 405px;
+} 
+.header {
+    width: 100%;
+    height: 192px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.header__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header__menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header__menu__link {
+    margin-left: 42px;
+    font-size: 16px;
+    color: black; 
+}
+a:hover{
+    color: #C056E5;
+}
+
+.first-screen {
+    width: 100%;
+    height: 580px;
+    background-color: #F5F5F5;
+    display: flex;
+}
+.first-screen__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+.inner {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.first-screen__computer {
+    width: 100%;
+}
+.first-screen__action {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+}
+.first-screen__button {
+    width: 224px;
+    height: 65px;
+    text-align: center;
+    background: #C056E5;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    line-height: 65px;
+}
+.first-screen img{
+    width: 355px;
+}
+.first-screen h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.first-screen p {
+    color: #727272;
+    line-height: 164%;
+    margin-bottom: 20px;
+}
+.first-screen a{
+    margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 1919px) {
+    .outer-width {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .inner-padding {
+        padding-left: 60px;
+        padding-right: 60px;
+    } 
+    .header {
+        height: 151px;
+    }
+    .first-screen {
+        height: 456px;
+    }
+
+}
+@media screen and (max-width: 1023px) {
+    .outer-width {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .inner-padding {
+        padding-left: 40px;
+        padding-right: 40px;
+    } 
+}

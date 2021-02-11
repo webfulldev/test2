@@ -4,45 +4,53 @@ body * {
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 .outer-width {
     max-width: 1920px;
     margin: 0 auto;
 }
+
 .inner-padding {
     padding-left: 405px;
     padding-right: 405px;
-} 
+}
+
 .header {
     width: 100%;
     height: 192px;
     background-color: #fff;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
+
 .header__logo {
-    display: flex;
+    display: flex; /* todo: тут внутри только 1 элемент, необязательно делать его флексом */
     justify-content: flex-start;
     align-items: center;
 }
+
 .header__menu ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     list-style: none;
 }
+
 .burger {
     display: none;
 }
-a{
+a { /* todo: тут стиль привязывается ко всем элементам <a> на странице, лучше привязывать стили к классам, а не к тегам */
     text-decoration: none;
 }
+
 .header__menu__link {
     margin-left: 42px;
     font-size: 16px;
-    color: black; 
+    color: black;
 }
-a:hover{
+
+a:hover { /* todo: см выше */
     color: #C056E5;
 }
 
@@ -52,28 +60,33 @@ a:hover{
     background-color: #F5F5F5;
     display: flex;
 }
+
 .first-screen__container {
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* todo: внутри только один элемент, так что это свойство тут не нужно */
     align-items: center;
     vertical-align: middle;
 }
+
 .inner {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
+
 .first-screen__computer {
     width: 100%;
 }
+
 .first-screen__action {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: left; 
+    align-items: left;  /* todo: у свойства align-items нет значения left */
 }
-.first-screen__button {
+
+.first-screen__button { /* todo: так как у всех ссылок сейчас при ховере меняется цвет, то текст на кнопке при наведении сливается с фоном */
     width: 224px;
     height: 65px;
     text-align: center;
@@ -84,59 +97,70 @@ a:hover{
     color: white;
     line-height: 65px;
 }
+
 .first-screen img{
     width: 355px;
 }
+
 .first-screen h1 {
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* todo: тут надо добавить margin-top: 0, так как браузер сам добавляет отступ сверху */
 }
+
 .first-screen p {
     color: #727272;
     line-height: 164%;
     margin-bottom: 20px;
 }
-.first-screen a{
-    margin-bottom: 40px;
-}
 
+.first-screen a {
+    margin-bottom: 40px; /* todo: удалить */
+}
 
 @media screen and (max-width: 1919px) {
     .outer-width {
         max-width: 1024px;
         margin: 0 auto;
     }
+
     .inner-padding {
         padding-left: 60px;
         padding-right: 60px;
-    } 
+    }
+
     .header {
         height: 151px;
     }
+
     .first-screen {
         height: 456px;
     }
+
     .burger {
         display: none;
     }
-
 }
+
 @media screen and (max-width: 1023px) {
     .outer-width {
         max-width: 768px;
         margin: 0 auto;
     }
+
     .inner-padding {
         padding-left: 40px;
         padding-right: 40px;
-    } 
+    }
+
     .header__menu {
         display: none;
     }
+
     .burger {
         position: relative;
         height: 30px;
     }
+
     .burger__bun {
         position: absolute;
         top: 50%;
@@ -144,50 +168,52 @@ a:hover{
         width: 70px;
         height: 5px;
         background-color: #C877F9;
-      }
-      
-      .burger__bun::before,
-      .burger__bun::after {
+    }
+
+    .burger__bun::before,
+    .burger__bun::after {
         content: '';
         position: absolute;
         width: 70px;
         height: 5px;
         right: 0;
         background-color: #C877F9;
-      }
-      
-      .burger__bun::before {
+    }
+
+    .burger__bun::before {
         top: -10px;
-      }
-      
-      .burger__bun::after {
+    }
+
+    .burger__bun::after {
         bottom: -10px;
-      }
-      .first-screen {
+    }
+
+    .first-screen {
         height: 680px;
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
-      }
-      .inner {
+    }
+    .inner {
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
-      }
-      .first-screen__computer {
+    }
+
+    .first-screen__computer {
         display: flex;
         text-align: center;
         width: 355px;
-      }
-      .first-screen__action {
+    }
+
+    .first-screen__action {
         display: flex;
         text-align: center;
-      }
-      .first-screen__button{
+    }
+
+    .first-screen__button{
         text-align: center;
         margin: 0 auto;
-      }
-
-
+    }
 }
 

@@ -137,7 +137,7 @@ a:hover { /* todo: см выше */
     }
 
     .burger {
-        display: none;
+        display: none; /* todo: чтобы отображалось нужен display: block */
     }
 }
 
@@ -158,14 +158,14 @@ a:hover { /* todo: см выше */
 
     .burger {
         position: relative;
-        height: 30px;
+        height: 30px;  /* todo: свойство width надо перенести сюда, иначе блок будет прибивать к правому краю */
     }
 
     .burger__bun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 70px;
+        width: 70px; /* todo: а тут указать 100% */
         height: 5px;
         background-color: #C877F9;
     }

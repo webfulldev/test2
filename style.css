@@ -25,9 +25,7 @@ body * {
 }
 
 .header__logo {
-    display: flex; /* todo: тут внутри только 1 элемент, необязательно делать его флексом */
-    justify-content: flex-start;
-    align-items: center;
+    display: block; /* todo: тут внутри только 1 элемент, необязательно делать его флексом */
 }
 
 .header__menu ul {
@@ -40,7 +38,7 @@ body * {
 .burger {
     display: none;
 }
-a { /* todo: тут стиль привязывается ко всем элементам <a> на странице, лучше привязывать стили к классам, а не к тегам */
+.header__menu__link { /* todo: тут стиль привязывается ко всем элементам <a> на странице, лучше привязывать стили к классам, а не к тегам */
     text-decoration: none;
 }
 
@@ -50,7 +48,7 @@ a { /* todo: тут стиль привязывается ко всем элем
     color: black;
 }
 
-a:hover { /* todo: см выше */
+.header__menu__link :hover { /* todo: см выше */
     color: #C056E5;
 }
 
@@ -64,7 +62,7 @@ a:hover { /* todo: см выше */
 .first-screen__container {
     height: 100%;
     display: flex;
-    justify-content: space-between; /* todo: внутри только один элемент, так что это свойство тут не нужно */
+     /* todo: внутри только один элемент, так что это свойство тут не нужно */
     align-items: center;
     vertical-align: middle;
 }
@@ -83,7 +81,7 @@ a:hover { /* todo: см выше */
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: left;  /* todo: у свойства align-items нет значения left */
+     /* todo: у свойства align-items нет значения left */
 }
 
 .first-screen__button { /* todo: так как у всех ссылок сейчас при ховере меняется цвет, то текст на кнопке при наведении сливается с фоном */
@@ -104,7 +102,7 @@ a:hover { /* todo: см выше */
 
 .first-screen h1 {
     font-size: 48px;
-    margin-bottom: 10px; /* todo: тут надо добавить margin-top: 0, так как браузер сам добавляет отступ сверху */
+    margin-top: 0px; /* todo: тут надо добавить margin-top: 0, так как браузер сам добавляет отступ сверху */
 }
 
 p {
@@ -113,13 +111,22 @@ p {
     margin-bottom: 20px;
 }
 
-.first-screen a {
-    margin-bottom: 40px; /* todo: удалить */
-}
-
+ /* todo: удалить */
 .about-me {
     text-align: center;
 }
+
+.numbers {
+    width: 100%;
+    background-color: #C278FF;
+    padding-top: 95px;
+    padding-bottom: 95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
 @media screen and (max-width: 1919px) {
     .outer-width {
         max-width: 1024px;
@@ -140,7 +147,7 @@ p {
     }
 
     .burger {
-        display: none; /* todo: чтобы отображалось нужен display: block */
+        display: block; /* todo: чтобы отображалось нужен display: block */
     }
 }
 
@@ -162,13 +169,13 @@ p {
     .burger {
         position: relative;
         height: 30px;  /* todo: свойство width надо перенести сюда, иначе блок будет прибивать к правому краю */
-    }
+    }    
 
     .burger__bun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 70px; /* todo: а тут указать 100% */
+        width: 100%; /* todo: а тут указать 100% */
         height: 5px;
         background-color: #C877F9;
     }

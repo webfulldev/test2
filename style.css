@@ -107,7 +107,7 @@ a:hover { /* todo: см выше */
     margin-bottom: 10px; /* todo: тут надо добавить margin-top: 0, так как браузер сам добавляет отступ сверху */
 }
 
-.first-screen p {
+p {
     color: #727272;
     line-height: 164%;
     margin-bottom: 20px;
@@ -117,6 +117,9 @@ a:hover { /* todo: см выше */
     margin-bottom: 40px; /* todo: удалить */
 }
 
+.about-me {
+    text-align: center;
+}
 @media screen and (max-width: 1919px) {
     .outer-width {
         max-width: 1024px;

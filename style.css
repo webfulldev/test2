@@ -48,7 +48,7 @@ body * {
     color: black;
 }
 
-.header__menu__link :hover { /* todo: hover без пробела, иначе не работает */
+.header__menu__link:hover { /* todo: hover без пробела, иначе не работает */
     color: #C056E5;
 }
 
@@ -112,15 +112,32 @@ p {
 .about-me {
     text-align: center;
 }
-
 .numbers {
+    background-color: #C278FF;
+}
+.container {
     width: 100%;
-    background-color: #C278FF; /* todo: см макет, там фон градиентом */
+     /* todo: см макет, там фон градиентом */
     padding-top: 95px;
     padding-bottom: 95px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.numbers__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.numbers__text {
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+}
+span {
+    font-size: 21px;
 
 }
 
@@ -164,15 +181,18 @@ p {
     }
 
     .burger {
+        display: block;
         position: relative;
-        height: 30px;  /* todo: свойство width надо перенести сюда, иначе блок будет прибивать к правому краю */
+        height: 30px;
+        width: 49px;  /* todo: свойство width надо перенести сюда, иначе блок будет прибивать к правому краю */
     }
 
     .burger__bun {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 100%; /* todo: а тут указать 100% */
+        width: 100%;
+         /* todo: а тут указать 100% */
         height: 5px;
         background-color: #C877F9; /* todo: см. макет */
     }
@@ -181,7 +201,7 @@ p {
     .burger__bun::after {
         content: '';
         position: absolute;
-        width: 70px;  /* todo: в макете другая ширина и ее надо перенести выше */
+        width: 49px;  /* todo: в макете другая ширина и ее надо перенести выше */
         height: 5px;
         right: 0;
         background-color: #C877F9; /* todo: см. макет */
@@ -210,17 +230,24 @@ p {
     .first-screen__computer {
         display: flex;
         text-align: center;
-        width: 355px; /* todo: Тут лучше указать максимульную ширину, а не ширину, иначе будет ломать адаптив */
+        max-width: 355px; /* todo: Тут лучше указать максимульную ширину, а не ширину, иначе будет ломать адаптив */
     }
 
     .first-screen__action {
         display: flex;
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .first-screen__button{
         text-align: center;
         margin: 0 auto;
+    }
+    .numbers__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
     }
 }
 

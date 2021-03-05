@@ -113,7 +113,7 @@ p {
     text-align: center;
 }
 .numbers {
-    background-color: #C278FF;
+    background: linear-gradient(#C278FF, #FF72CC);
 }
 .container {
     width: 100%;
@@ -123,6 +123,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .numbers__items {
@@ -243,11 +244,14 @@ span {
         text-align: center;
         margin: 0 auto;
     }
-    .numbers__items {
+    .container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         color: white;
+        flex-wrap: wrap;
+        width: 40%;
     }
 }
 
